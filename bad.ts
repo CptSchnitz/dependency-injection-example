@@ -12,7 +12,7 @@ class Manager {
     const db = new DB();
     const persons = []
     for (let i = 0; i < number; i++) {
-      const person = db.getPersonFromDb(Math.floor(Math.random() * 9));
+      const person = db.GetPersonFromDb(Math.floor(Math.random() * 9));
       persons.push(person)
     }
     return persons

@@ -81,8 +81,12 @@ const humans = [
   },
 ];
 
-export class DB {
-  getPersonFromDb(id: number) {
+export interface IDB {
+  GetPersonFromDb(id:number);
+}
+
+export class DB implements IDB {
+  GetPersonFromDb(id: number) {
     if (id >= humans.length) {
       throw new Error('bad id');
     }

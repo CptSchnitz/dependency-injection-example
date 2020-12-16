@@ -8,7 +8,7 @@ class Manager {
   public GetRandomPersons(number: number) {
     const persons = []
     for (let i = 0; i < number; i++) {
-      const person = this.db.getPersonFromDb(Math.floor(Math.random() * 9));
+      const person = this.db.GetPersonFromDb(Math.floor(Math.random() * 9));
       persons.push(person)
     }
     return persons
